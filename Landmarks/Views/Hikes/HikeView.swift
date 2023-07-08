@@ -9,13 +9,13 @@ import SwiftUI
 
 extension AnyTransition {
     static var moveAndFade: AnyTransition {
-        .asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .bottom))
+        .asymmetric(insertion: .move(edge: .trailing), removal: .scale)
     }
 }
 
 struct HikeView: View {
     var hike: Hike
-    @State private var showDetail = true
+    @State private var showDetail = false
 
     var body: some View {
         VStack {
